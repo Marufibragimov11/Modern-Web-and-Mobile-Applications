@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teacher Dashboard (Static)</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- <link rel="stylesheet" href="css/teacher-ui.css" /> -->
+</head>
+<body class="dashboard-page">
+  <div id="message" class="notice notice--success" role="status">
+    Attendance saved successfully (sample message).
+  </div>
+
+  <main class="content3">
+    <div class="verify-message">Please wait for few hours,<br /><br />Students information is being verified!</div>
+
+    <header class="dashboard-header">
+      <h3 class="dashboard-title">You're currently teaching the following subject(s):</h3>
+      <div class="dashboard-actions">
+        <button class="btn btn--ghost" type="button">Export</button>
+        <button class="btn" type="button">Settings</button>
+      </div>
+    </header>
+
+    <section class="dashboard-container">
+      <div class="table-wrap">
+        <table class="responstable" aria-label="Subjects table">
+          <thead>
+            <tr>
+              <th rowspan="2" style="width:4%">#</th>
+              <th rowspan="2">Subject</th>
+              <th rowspan="2">Batch</th>
+              <th colspan="2">Count</th>
+              <th colspan="2">Attendance</th>
+              <th rowspan="2">Last Lecture</th>
+              <th rowspan="2">Last Entry</th>
+            </tr>
+            <tr>
+              <th>Theory</th>
+              <th>Practical</th>
+              <th>Add</th>
+              <th>View</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>1</td>
+              <td class="cell-left">
+                <a href="add-attendance-static.html" class="link">Modern Web and Mobile Applications</a>
+              </td>
+              <td>CS-2023-A</td>
+              <td>12</td>
+              <td>6</td>
+              <td>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="0">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="1">Practical</a>
+              </td>
+              <td>
+                <a class="pill" href="#" aria-disabled="true">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill" href="#" aria-disabled="true">Practical</a>
+              </td>
+              <td><time datetime="2026-02-05">2026-02-05</time></td>
+              <td>2026-02-06 11:20</td>
+            </tr>
+    
+
+            <tr>
+              <td>2</td>
+              <td class="cell-left">
+                <a href="add-attendance-static.html" class="link">Database Systems</a>
+              </td>
+              <td>CS-2022-B</td>
+              <td>9</td>
+              <td>0</td>
+              <td>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="0">Theory</a>
+                
+              </td>
+              <td>
+                <a class="pill" href="#" aria-disabled="true">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill" href="#" aria-disabled="true">Practical</a>
+              </td>
+              <td><time datetime="2026-02-04">2026-02-04</time></td>
+              <td>2026-02-04 15:05</td>
+            </tr>
+    
+
+            <tr>
+              <td>3</td>
+              <td class="cell-left">
+                <a href="add-attendance-static.html" class="link">Operating Systems</a>
+              </td>
+              <td>CS-2022-A</td>
+              <td>14</td>
+              <td>7</td>
+              <td>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="0">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="1">Practical</a>
+              </td>
+              <td>
+                <a class="pill" href="#" aria-disabled="true">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill" href="#" aria-disabled="true">Practical</a>
+              </td>
+              <td><time datetime="2026-02-07">2026-02-07</time></td>
+              <td>2026-02-07 13:42</td>
+            </tr>
+    
+
+            <tr>
+              <td>4</td>
+              <td class="cell-left">
+                <a href="add-attendance-static.html" class="link">Advancements in Artificial Intelligence</a>
+              </td>
+              <td>CS-2021-A</td>
+              <td>6</td>
+              <td>0</td>
+              <td>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="0">Theory</a>
+                
+              </td>
+              <td>
+                <a class="pill" href="#" aria-disabled="true">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill" href="#" aria-disabled="true">Practical</a>
+              </td>
+              <td><time datetime="2026-02-03">2026-02-03</time></td>
+              <td>2026-02-03 10:10</td>
+            </tr>
+    
+
+            <tr>
+              <td>5</td>
+              <td class="cell-left">
+                <a href="add-attendance-static.html" class="link">Intelligent Systems</a>
+              </td>
+              <td>CS-2021-B</td>
+              <td>8</td>
+              <td>4</td>
+              <td>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="0">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill pill--action" href="add-attendance-static.html" data-is_practical="1">Practical</a>
+              </td>
+              <td>
+                <a class="pill" href="#" aria-disabled="true">Theory</a>
+                <span class="sep">|</span>
+                <a class="pill" href="#" aria-disabled="true">Practical</a>
+              </td>
+              <td><time datetime="2026-02-08">2026-02-08</time></td>
+              <td>2026-02-08 09:55</td>
+            </tr>
+    
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="page-footer">
+        <small>Static snapshot for CSS lab. Backend functionality is intentionally disabled.</small>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Demo: show/hide the verification message for students to style.
+    // Toggle to preview both states quickly:
+    // document.querySelector(".verify-message").style.display = "block";
+  </script>
+</body>
+</html>

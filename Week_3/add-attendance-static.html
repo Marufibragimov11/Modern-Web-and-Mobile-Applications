@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Attendance (Static)</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- <link rel="stylesheet" href="css/teacher-ui.css" /> -->
+</head>
+<body class="dashboard-page">
+  <main class="content1">
+    <header class="dashboard-header">
+      <h3 class="dashboard-title">Add Attendance (Static)</h3>
+      <div class="dashboard-actions">
+        <a class="btn btn--ghost" href="index-static.html">Back to dashboard</a>
+      </div>
+    </header>
+
+    <form class="form" id="form" action="#" method="post">
+      <section class="card form-style-3">
+        <fieldset class="fieldset">
+          <legend class="legend">Lecture Info</legend>
+
+          <div class="lecture-grid">
+            <label class="field">
+              <span class="field__label">Subject</span>
+              <select id="sujet" class="field__control">
+                <option selected>Modern Web and Mobile Applications</option>
+                <option>Database Systems</option>
+                <option>Operating Systems</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Topic</span>
+              <input class="field__control" type="text" id="topic" name="topic" placeholder="e.g., CSS Grid and Responsive Tables" />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Conduct Date</span>
+              <input class="field__control" name="lecture_date" id="datepicker_attendance" type="text" value="Select Date" readonly />
+            </label>
+
+            <div class="field">
+              <span class="field__label">Time Slot</span>
+              <div class="timeslot-wrap">
+                <table id="tblTimeLabels" class="timelabels" aria-label="Time labels">
+                  <tr>
+                    <td>08:00</td><td>09:00</td><td>10:00</td><td>11:00</td><td>12:00</td><td>13:00</td><td>14:00</td><td>15:00</td><td>16:00</td>
+                  </tr>
+                </table>
+                <table id="tblTimeSlots" class="timeslots" aria-label="Time slots">
+                  <tr>
+                    <td id="td1"></td><td id="td2"></td><td id="td3" class="brktimeslot">break</td><td id="td4"></td><td id="td5"></td><td id="td6"></td><td id="td7"></td><td id="td8"></td><td id="td9"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <p class="hint">Red represents the occupied slot or break time.</p>
+        </fieldset>
+      </section>
+
+      <section class="card">
+        <h4 class="section-title">Mark Attendance</h4>
+
+        <div class="attendance-grid" id="attendance_table" aria-label="Students grid">
+
+          <button type="button" class="student-tile present" data-roll="CS23-001" aria-pressed="true">
+            <span class="student-tile__roll">CS23-001</span>
+            <span class="student-tile__name" aria-hidden="true">Student 1</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-002" aria-pressed="true">
+            <span class="student-tile__roll">CS23-002</span>
+            <span class="student-tile__name" aria-hidden="true">Student 2</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-003" aria-pressed="true">
+            <span class="student-tile__roll">CS23-003</span>
+            <span class="student-tile__name" aria-hidden="true">Student 3</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-004" aria-pressed="true">
+            <span class="student-tile__roll">CS23-004</span>
+            <span class="student-tile__name" aria-hidden="true">Student 4</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-005" aria-pressed="true">
+            <span class="student-tile__roll">CS23-005</span>
+            <span class="student-tile__name" aria-hidden="true">Student 5</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-006" aria-pressed="true">
+            <span class="student-tile__roll">CS23-006</span>
+            <span class="student-tile__name" aria-hidden="true">Student 6</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-007" aria-pressed="true">
+            <span class="student-tile__roll">CS23-007</span>
+            <span class="student-tile__name" aria-hidden="true">Student 7</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-008" aria-pressed="true">
+            <span class="student-tile__roll">CS23-008</span>
+            <span class="student-tile__name" aria-hidden="true">Student 8</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-009" aria-pressed="true">
+            <span class="student-tile__roll">CS23-009</span>
+            <span class="student-tile__name" aria-hidden="true">Student 9</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-010" aria-pressed="true">
+            <span class="student-tile__roll">CS23-010</span>
+            <span class="student-tile__name" aria-hidden="true">Student 10</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-011" aria-pressed="true">
+            <span class="student-tile__roll">CS23-011</span>
+            <span class="student-tile__name" aria-hidden="true">Student 11</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-012" aria-pressed="true">
+            <span class="student-tile__roll">CS23-012</span>
+            <span class="student-tile__name" aria-hidden="true">Student 12</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-013" aria-pressed="true">
+            <span class="student-tile__roll">CS23-013</span>
+            <span class="student-tile__name" aria-hidden="true">Student 13</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-014" aria-pressed="true">
+            <span class="student-tile__roll">CS23-014</span>
+            <span class="student-tile__name" aria-hidden="true">Student 14</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-015" aria-pressed="true">
+            <span class="student-tile__roll">CS23-015</span>
+            <span class="student-tile__name" aria-hidden="true">Student 15</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-016" aria-pressed="true">
+            <span class="student-tile__roll">CS23-016</span>
+            <span class="student-tile__name" aria-hidden="true">Student 16</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-017" aria-pressed="true">
+            <span class="student-tile__roll">CS23-017</span>
+            <span class="student-tile__name" aria-hidden="true">Student 17</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-018" aria-pressed="true">
+            <span class="student-tile__roll">CS23-018</span>
+            <span class="student-tile__name" aria-hidden="true">Student 18</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-019" aria-pressed="true">
+            <span class="student-tile__roll">CS23-019</span>
+            <span class="student-tile__name" aria-hidden="true">Student 19</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-020" aria-pressed="true">
+            <span class="student-tile__roll">CS23-020</span>
+            <span class="student-tile__name" aria-hidden="true">Student 20</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-021" aria-pressed="true">
+            <span class="student-tile__roll">CS23-021</span>
+            <span class="student-tile__name" aria-hidden="true">Student 21</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-022" aria-pressed="true">
+            <span class="student-tile__roll">CS23-022</span>
+            <span class="student-tile__name" aria-hidden="true">Student 22</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-023" aria-pressed="true">
+            <span class="student-tile__roll">CS23-023</span>
+            <span class="student-tile__name" aria-hidden="true">Student 23</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-024" aria-pressed="true">
+            <span class="student-tile__roll">CS23-024</span>
+            <span class="student-tile__name" aria-hidden="true">Student 24</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-025" aria-pressed="true">
+            <span class="student-tile__roll">CS23-025</span>
+            <span class="student-tile__name" aria-hidden="true">Student 25</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-026" aria-pressed="true">
+            <span class="student-tile__roll">CS23-026</span>
+            <span class="student-tile__name" aria-hidden="true">Student 26</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-027" aria-pressed="true">
+            <span class="student-tile__roll">CS23-027</span>
+            <span class="student-tile__name" aria-hidden="true">Student 27</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-028" aria-pressed="true">
+            <span class="student-tile__roll">CS23-028</span>
+            <span class="student-tile__name" aria-hidden="true">Student 28</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-029" aria-pressed="true">
+            <span class="student-tile__roll">CS23-029</span>
+            <span class="student-tile__name" aria-hidden="true">Student 29</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-030" aria-pressed="true">
+            <span class="student-tile__roll">CS23-030</span>
+            <span class="student-tile__name" aria-hidden="true">Student 30</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-031" aria-pressed="true">
+            <span class="student-tile__roll">CS23-031</span>
+            <span class="student-tile__name" aria-hidden="true">Student 31</span>
+          </button>
+
+          <button type="button" class="student-tile present" data-roll="CS23-032" aria-pressed="true">
+            <span class="student-tile__roll">CS23-032</span>
+            <span class="student-tile__name" aria-hidden="true">Student 32</span>
+          </button>
+        </div>
+
+        <div class="toolbar">
+          <button type="button" class="btn btn--success" id="all_present">All Present</button>
+          <button type="button" class="btn btn--danger" id="all_absent">All Absent</button>
+          <button type="button" class="btn btn--primary" id="add-attendance">Add Attendance</button>
+        </div>
+
+        <p class="legend-line">
+          Please note that <span class="chip chip--success">GREEN</span> represents PRESENT and <span class="chip chip--danger">RED</span> represents ABSENT.
+        </p>
+      </section>
+    </form>
+  </main>
+
+  <script>
+    // Minimal JS to simulate toggling present/absent state for UI testing (no backend).
+    const tiles = document.querySelectorAll(".student-tile");
+    tiles.forEach(t => {
+      t.addEventListener("click", () => {
+        t.classList.toggle("absent");
+        const on = !t.classList.contains("absent");
+        t.setAttribute("aria-pressed", String(on));
+      });
+    });
+
+    document.getElementById("all_absent").addEventListener("click", () => {
+      tiles.forEach(t => { t.classList.add("absent"); t.setAttribute("aria-pressed","false"); });
+    });
+
+    document.getElementById("all_present").addEventListener("click", () => {
+      tiles.forEach(t => { t.classList.remove("absent"); t.setAttribute("aria-pressed","true"); });
+    });
+
+    // Timeslot toggling
+    document.querySelectorAll("#tblTimeSlots td").forEach(td => {
+      if (td.classList.contains("brktimeslot")) return;
+      td.addEventListener("click", () => td.classList.toggle("timeslot-on"));
+    });
+  </script>
+</body>
+</html>
